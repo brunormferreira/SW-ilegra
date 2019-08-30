@@ -1,0 +1,28 @@
+.results__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 15px 1% 15px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .2);
+  background: #000;
+  padding: 15px 20px;
+  overflow: hidden;
+  list-style: none;
+  color: #fff;
+}
+
+.results__title {
+  display: inline-block;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #d8d499;
+  padding-bottom: 3px;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.results__info {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.5rem;
+}
