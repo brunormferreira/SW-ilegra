@@ -1,18 +1,13 @@
 .App {
-  text-align: center;
-}
-
-.App__header {
   background: url('http://wallpapercave.com/wp/pEeUsp1.jpg');
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
+  text-align: center;
   color: white;
 }
 
-.App__text {
-  margin: 0 0 31px 0;
+.App__title {
+  margin: 0 0 10px 0;
 }

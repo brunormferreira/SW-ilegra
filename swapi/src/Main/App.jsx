@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import { Logo } from '../components/Logo/Logo'
+import { Footer } from '../components/Footer/Footer'
 import { FilmList } from '../components/Films/Films-list'
 
 class App extends Component {
@@ -24,11 +25,10 @@ class App extends Component {
     console.log(films);
     return (
       <div className="App">
-        <div className="App__header">
-          <Logo />
-          <p className="App__text">List of films</p>
-          <FilmList films={films} />
-        </div>
+        <Logo />
+        <p className="App__title">List of films</p>
+        <FilmList films={films} />
+        <Footer />
       </div>
     );
   }
