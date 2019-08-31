@@ -5,7 +5,7 @@ import './Films.css'
 export const Film = props => (
   <li className="results__item">
     <h3 className="results__title">
-      {props.film.name}
+      {props.film.title}
       <span> (Episode {props.film.episode_id})</span>
     </h3>
     <ul className="results__info">

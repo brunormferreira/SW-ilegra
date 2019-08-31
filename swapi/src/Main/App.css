@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #000;
+.App__header {
+  background: url('http://wallpapercave.com/wp/pEeUsp1.jpg');
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -13,6 +13,6 @@
   color: white;
 }
 
-.App-text {
+.App__text {
   margin: 0 0 31px 0;
 }

@@ -7,7 +7,7 @@ import './Films-list.css'
 export const FilmList = props => (
   <div className="films__list">
     {props.films.map(film => (
-      <Film key={film.id} film={film} />
+      <Film key={film.episode_id} film={film} />
     ))}
   </div>
 );

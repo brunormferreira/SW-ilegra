@@ -24,11 +24,11 @@ class App extends Component {
     console.log(films);
     return (
       <div className="App">
-        <header className="App-header">
+        <div className="App__header">
           <Logo />
-          <p className="App-text">start project swapi - Bruno Ramires</p>
-        </header>
-        <FilmList films={films} />
+          <p className="App__text">List of films</p>
+          <FilmList films={films} />
+        </div>
       </div>
     );
   }
