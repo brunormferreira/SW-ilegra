@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import axios from 'axios'
+
 import { Logo } from '../components/Logo/Logo'
 import { Footer } from '../components/Footer/Footer'
 import { FilmList } from '../components/Films/Films-list'
@@ -17,9 +19,10 @@ class App extends Component {
 
   componentDidMount() {
     asyncCall().then(() => this.setState({ loading: false }));
-    fetch('https://swapi.co/api/films/')
-      .then(response => response.json())
-      .then(film => this.setState({ films: film.results }))
+    let baseUrl = 'https://swapi.co/api'
+    let query = '/films/'
+    axios.get(baseUrl + query)
+      .then(film => this.setState({ films: film.data.results }));
   }
 
   render () {
@@ -27,7 +30,6 @@ class App extends Component {
     if(loading) {
       return null;
     }
-    console.log(films);
     return (
       <div className="App">
         <Logo />
