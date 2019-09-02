@@ -1,2 +1,3 @@
-# swapi-ilg
-test front-end UI ilg
+# SWAPI-ilg
+
+- Switch to `dev branch` to run the project.
