@@ -11,17 +11,22 @@ class App extends Component {
 
     this.state = {
       films: [],
+      loading: true
     };
   }
 
   componentDidMount() {
+    asyncCall().then(() => this.setState({ loading: false }));
     fetch('https://swapi.co/api/films/')
       .then(response => response.json())
       .then(film => this.setState({ films: film.results }))
   }
 
   render () {
-    const { films } = this.state;
+    const { films, loading } = this.state;
+    if(loading) {
+      return null;
+    }
     console.log(films);
     return (
       <div className="App">
@@ -32,6 +37,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+function asyncCall() {
+  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
 }
 
 export default App;
