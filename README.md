@@ -2,8 +2,6 @@
 
 - This project intends to use [SWAPI API](https://swapi.co/)
 
-- Switch to `dev branch` to run the project.
-
 ## Running
     
    - On command line do as follow:
