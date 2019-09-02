@@ -4,6 +4,7 @@ import './App.css';
 import { Logo } from '../components/Logo/Logo'
 import { Footer } from '../components/Footer/Footer'
 import { FilmList } from '../components/Films/Films-list'
+import { Title } from '../components/Title/Title'
 
 import { asyncCall } from '../utils/utils'
 import { getFilms } from '../services/Api'
@@ -31,7 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <Logo />
-        <p className="App__title">List of films</p>
+        <Title />
         <FilmList films={films} />
         <Footer />
       </div>
