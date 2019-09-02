@@ -40,7 +40,7 @@ class App extends Component {
 }
 
 function asyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  return new Promise((resolve) => setTimeout(() => resolve(), 3000));
 }
 
 export default App;
