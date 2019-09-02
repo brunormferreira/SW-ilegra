@@ -17,15 +17,34 @@
   font-size: 1.5rem;
 }
 
+@media (max-width: 400px) {
+  .films__title {
+    font-size: 1.0rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .films__title {
+    font-size: 1.25rem;
+  }
+}
+
 .films__container {
   display: flex;
   justify-content: space-around;
 }
 
-.films__img {
+.films__img--green {
   bottom: 10px;
   width: auto;
   height: 80px;
+}
+
+.films__img--red {
+  bottom: 10px;
+  width: auto;
+  height: 80px;
+  transform: scaleX(-1);
 }
 
 .films__info {
