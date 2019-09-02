@@ -6,7 +6,7 @@ import { Footer } from '../components/Footer/Footer'
 import { FilmList } from '../components/Films/Films-list'
 
 import { asyncCall } from '../utils/utils'
-import { getFilms } from '../utils/utils'
+import { getFilms } from '../services/Api'
 
 class App extends Component {
   constructor() {
