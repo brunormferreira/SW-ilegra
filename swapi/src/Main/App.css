@@ -1,9 +1,9 @@
 .App {
-  background: url('http://wallpapercave.com/wp/pEeUsp1.jpg');
+  background-image: url('../assets/images/bg.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(8px + 2vmin);
+  font-size: calc(6px + 2vmin);
   text-align: center;
   color: white;
 }
@@ -13,67 +13,40 @@
   font-size: 34px;
 }
 
-#root:not(:empty) + .sk-cube-grid {
+#root:not(:empty) + .load {
   display: none;
 }
 
-.sk-cube-grid {
-  width: 40px;
-  height: 40px;
-  margin: 100px auto;
+body {
+  background-image: url('../assets/images/bg.jpg');
 }
 
-.sk-cube-grid .sk-cube {
-  width: 33%;
-  height: 33%;
-  background-color: #333;
-  float: left;
-  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+.load{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  width:100px;
+  height:100px;
+}
+.load hr{
+  border:0;
+  margin:0;
+  width:40%;
+  height:40%;
+  position:absolute;
+  border-radius:50%;
+  animation:spin 2s ease infinite
 }
 
-.sk-cube-grid .sk-cube1 {
-  animation-delay: 0.2s;
-}
+.load :first-child{background:#FFE81F;animation-delay:-1.5s}
+.load :nth-child(2){background:#FFE81F;animation-delay:-1s}
+.load :nth-child(3){background:#FFE81F;animation-delay:-0.5s}
+.load :last-child{background:#FFE81F}
 
-.sk-cube-grid .sk-cube2 {
-  animation-delay: 0.3s;
-}
-
-.sk-cube-grid .sk-cube3 {
-  animation-delay: 0.4s;
-}
-
-.sk-cube-grid .sk-cube4 {
-  animation-delay: 0.1s;
-}
-
-.sk-cube-grid .sk-cube5 {
-  animation-delay: 0.2s;
-}
-
-.sk-cube-grid .sk-cube6 {
-  animation-delay: 0.3s;
-}
-
-.sk-cube-grid .sk-cube7 {
-  animation-delay: 0s;
-}
-
-.sk-cube-grid .sk-cube8 {
-  animation-delay: 0.1s;
-}
-
-.sk-cube-grid .sk-cube9 {
-  animation-delay: 0.2s;
-}
-
-@keyframes sk-cubeGridScaleDelay {
-  0%,
-  70%,
-  100% {
-    transform: scale3D(1, 1, 1);
-  }
-  35% {
-    transform: scale3D(0, 0, 1);
-  }
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
 }
