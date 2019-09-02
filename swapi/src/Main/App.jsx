@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import axios from 'axios'
-
 import { Logo } from '../components/Logo/Logo'
 import { Footer } from '../components/Footer/Footer'
 import { FilmList } from '../components/Films/Films-list'
+
+import { asyncCall } from '../utils/utils'
+import { getFilms } from '../utils/utils'
 
 class App extends Component {
   constructor() {
@@ -19,14 +20,7 @@ class App extends Component {
 
   componentDidMount() {
     asyncCall().then(() => this.setState({ loading: false }));
-    this.getFilms();
-  }
-
-  getFilms() {
-    let baseUrl = 'https://swapi.co/api'
-    let query = '/films/'
-    axios.get(baseUrl + query)
-      .then(film => this.setState({ films: film.data.results })).catch(err => console.log(err));
+    getFilms().then(film => this.setState({ films: film.data.results })).catch(err => console.log(err));
   }
 
   render () {
@@ -43,10 +37,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-function asyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 3000));
 }
 
 export default App;
