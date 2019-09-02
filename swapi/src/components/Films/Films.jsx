@@ -1,6 +1,8 @@
 import React from 'react';
 
 import './Films.css'
+import greenSaber from '../../assets/images/green-saber.svg'
+import redSaber from '../../assets/images/red-saber.svg'
 
 export const Film = props => (
   <li className="films__item">
@@ -8,10 +10,15 @@ export const Film = props => (
       {props.film.title}
       <span> ~ (Episode {props.film.episode_id})</span>
     </h3>
-    <ul className="films__info">
-      <li>Released <span>{props.film.release_date}</span> </li>
-      <li>Directed by <span>{props.film.director}</span> </li>
-      <li>Produced by <span>{props.film.producer}</span> </li>
-    </ul>
+    <div className="films__container">
+      <img className="films__img" src={greenSaber} alt="green-saber" />
+      <ul className="films__info">
+        <li>Released in <span>{props.film.release_date}</span> </li>
+        <li>Directed by <span>{props.film.director}</span> </li>
+        <li>Produced by <span>{props.film.producer}</span> </li>
+      </ul>
+      <img className="films__img" src={redSaber} alt="red-saber" />
+    </div>
+    
   </li>
 );

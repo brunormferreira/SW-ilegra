@@ -17,6 +17,17 @@
   font-size: 1.5rem;
 }
 
+.films__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.films__img {
+  bottom: 10px;
+  width: auto;
+  height: 80px;
+}
+
 .films__info {
   margin: 0;
   padding: 0;
