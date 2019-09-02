@@ -2,6 +2,14 @@
 
 - This project intends to use [SWAPI API](https://swapi.co/)
 
+## Used technologies
+   
+   ```
+    Framework Reactjs;
+    Library axios;
+    So much HTML, CSS and JS :P
+   ```
+
 ## Running
     
    - On command line do as follow:
