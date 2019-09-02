@@ -19,10 +19,14 @@ class App extends Component {
 
   componentDidMount() {
     asyncCall().then(() => this.setState({ loading: false }));
+    this.getFilms();
+  }
+
+  getFilms() {
     let baseUrl = 'https://swapi.co/api'
     let query = '/films/'
     axios.get(baseUrl + query)
-      .then(film => this.setState({ films: film.data.results }));
+      .then(film => this.setState({ films: film.data.results })).catch(err => console.log(err));
   }
 
   render () {
