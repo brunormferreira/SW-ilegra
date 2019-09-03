@@ -8,6 +8,7 @@ body {
 }
 
 body::-webkit-scrollbar {
+  background-image: url('./assets/images/bg.jpg');
   width: 1em;
 }
 
