@@ -14,3 +14,12 @@
   margin-top: 20px;
   margin-left: 29px;
 }
+
+@media (max-width: 425px) {
+  .App__yoda {
+    width: 75px;
+    height: 80px;
+    margin-top: 2px;
+    margin-left: 8px;
+  }
+}
