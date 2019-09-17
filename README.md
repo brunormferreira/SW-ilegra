@@ -15,7 +15,7 @@
    - On command line do as follow:
    
    ```
-    $ git clone https://github.com/brunormferreira/swapi-ilg.git
+    $ git clone https://github.com/brunormferreira/SW-ilegra.git
     $ cd swapi
     $ git checkout dev
     $ yarn/npm install
